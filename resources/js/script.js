@@ -15,7 +15,6 @@ $(document).ready(function() {
     
 
     /*Scroll on buttons*/
-
     $('.js--scroll-to-reservation').click(function(){
         $('html,body').animate({scrollTop: $('.js--section-locations').offset().top}, 500);
 
@@ -30,7 +29,7 @@ $(document).ready(function() {
     
     
     /*Navigation Scroll*/
-        $('a[href^="#"]').on('click', function(event) {
+    $('a[href^="#"]').on('click', function(event) {
         var target = $(this.getAttribute('href'));
         if( target.length ) {
             event.preventDefault();
@@ -97,7 +96,7 @@ $(document).ready(function() {
         
     });
     
-      /*Zoom Gallery*/
+    /*Zoom Gallery*/
     $('.js--gallery').magnificPopup({
         gallery: {
           enabled: true
@@ -111,8 +110,19 @@ $(document).ready(function() {
 				return item.el.attr('title');
 			}
 		},
-
     });
-    
-    
+
+    /* Typed effect */
+    var typed = new Typed('.typed-effect', {
+        strings: ["Fresh", "Healthy", "Delicious"],
+        startDelay: 700,
+        backDelay: 1200,
+        typeSpeed: 70,
+        backSpeed: 60,
+        showCursor: false,
+        loop: true,
+        shuffle: false,
+
+        });
+      
 });
